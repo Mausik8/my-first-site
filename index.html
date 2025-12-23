@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея: Дика природа</title>
+    <style>
+        /* Базові стилі */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f2f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 1.6;
+            padding: 0 15px;
+        }
+
+        /* Контейнер галереї через CSS Grid (Завдання 3) */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Стилізація карток зображень */
+        .photo-card {
+            background: white;
+            padding: 10px;
+            border: 1px solid #ddd; /* Рамка (Завдання 4) */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s ease; /* Плавність (Завдання зі зірочкою) */
+        }
+
+        /* Стилізація самих зображень (Завдання 4) */
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Щоб всі фото були одного розміру */
+            border-radius: 4px;
+            display: block;
+            margin-bottom: 10px;
+            loading: lazy; /* Оптимізація */
+        }
+
+        /* Ефект при наведенні (Завдання 4) */
+        .photo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+            border-color: #2e7d32;
+        }
+
+        .photo-card img:hover {
+            filter: brightness(1.1);
+        }
+
+        /* Підписи під фото */
+        .photo-card p {
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin: 10px 0 5px;
+            color: #2e7d32;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Адаптивність (Завдання 4) */
+        @media (max-width: 600px) {
+            .gallery-container {
+                padding: 15px;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Дивовижний Світ Тварин</h1>
+    <p>Мій фотоальбом мешканців нашої планети</p>
+</header>
+
+<main>
+    <div class="description">
+        <p>Ласкаво просимо до моєї галереї дикої природи! Тут зібрані фотографії найцікавіших представників фауни з різних куточків світу. Кожна тварина унікальна та відіграє важливу роль у екосистемі нашої Землі.</p>
+    </div>
+
+    <div class="gallery-container">
+        
+        <div class="photo-card">
+            <img src="images/animal1.jpg" alt="Лев у савані" title="Цар звірів відпочиває">
+            <p>Величний Лев</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/animal2.jpg" alt="Блакитний папуга" title="Яскравий Ара">
+            <p>Папуга Ара</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/animal3.jpg" alt="Слон у лісі" title="Африканський слон">
+            <p>Африканський Слон</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/animal4.jpg" alt="Руда лисиця" title="Лисиця в снігу">
+            <p>Хитра Лисиця</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/animal5.jpg" alt="Гірська панда" title="Велика панда їсть бамбук">
+            <p>Гігантська Панда</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/animal6.jpg" alt="Морська черепаха" title="Черепаха в океані">
+            <p>Морська Черепаха</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/animal7.jpg" alt="Смугастий тигр" title="Тигр на полюванні">
+            <p>Бенгальський Тигр</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/animal8.jpg" alt="Сніжний барс" title="Барс на скелях">
+            <p>Сніжний Барс</p>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>Контактна інформація: maksimbehter266@gmail.com | 2025 Рік</p>
+</footer>
+
+</body>
+</html>
